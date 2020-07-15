@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Car, HttpClientService} from '../http-client.service';
+import {HttpClientService} from '../http-client.service';
+import {Car} from '../Car';
 
 @Component({
   selector: 'app-addcar',
@@ -7,7 +8,7 @@ import {Car, HttpClientService} from '../http-client.service';
   styleUrls: ['./addcar.component.css']
 })
 export class AddcarComponent implements OnInit {
-  car: Car = new Car('','','','','','');
+  car: Car = new Car();
   constructor(
     private httpClientService: HttpClientService
   ) { }

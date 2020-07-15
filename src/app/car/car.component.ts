@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientService, Car} from '../http-client.service';
 import {AuthenitcationService} from '../authenitcation.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class CarComponent implements OnInit {
 
   constructor(
     private httpClientService: HttpClientService,
-    private loginService: AuthenitcationService
+    private loginService: AuthenitcationService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -27,4 +29,8 @@ export class CarComponent implements OnInit {
       .subscribe(data => {
         this.cars = this.cars.filter(u => u !== car);
     }); }
+
+  getCarDetails(car: Car){
+    this.router.navigate(['car-details', car.id]);
+  }
 }

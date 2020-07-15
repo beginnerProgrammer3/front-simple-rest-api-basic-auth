@@ -22,7 +22,7 @@
         <td>{{car.kilometers}}</td>
         <td>{{car.price}}</td>
         <td><button class="btn btn-danger" (click)='deleteCar(car)'>Delete Car </button></td>
-        <td><button class="btn btn-danger" routerLink="/details">Details </button></td>
+        <td><button class="btn btn-info" (click)='getCarDetails(car)'>Details </button></td>
       </tr>
     </tbody>
   </table>

@@ -12,6 +12,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { CardetailsComponent } from './cardetails/cardetails.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { LogoutComponent } from './logout/logout.component';
     HeaderComponent,
     LoginComponent,
     LogoutComponent,
+    CardetailsComponent,
    ],
   imports: [
     BrowserModule,
