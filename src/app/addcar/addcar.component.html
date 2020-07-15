@@ -31,6 +31,11 @@
       <input type="price" [(ngModel)]="car.price" class="form-control" placeholder="Price" name="price">
     </div>
 
+    <div class="form-group">
+      <label >Image: </label>
+      <input type="image" [(ngModel)]="car.image" class="form-control" placeholder="Image" name="image">
+    </div>
+
     <button class="btn btn-success" (click)="createCar()">Create</button>
 
   </form>

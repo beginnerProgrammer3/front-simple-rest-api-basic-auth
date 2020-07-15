@@ -6,4 +6,5 @@ export class Car {
     public capacityEngine: number;
     public kilometers: number;
     public price: number;
+    public image: string;
 }

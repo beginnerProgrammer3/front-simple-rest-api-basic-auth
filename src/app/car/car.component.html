@@ -7,8 +7,6 @@
     <tr>
       <th>mark</th>
       <th>name</th>
-      <th>engine</th>
-      <th>capacityEngine</th>
       <th>kilometers</th>
       <th>price</th>
     </tr>
@@ -17,8 +15,6 @@
       <tr *ngFor="let car of cars">
         <td>{{car.mark}}</td>
         <td>{{car.name}}</td>
-        <td>{{car.engine}}</td>
-        <td>{{car.capacityEngine}}</td>
         <td>{{car.kilometers}}</td>
         <td>{{car.price}}</td>
         <td><button class="btn btn-danger" (click)='deleteCar(car)'>Delete Car </button></td>
