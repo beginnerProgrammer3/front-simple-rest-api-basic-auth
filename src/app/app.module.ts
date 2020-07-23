@@ -7,12 +7,13 @@ import { CarComponent } from './car/car.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CardetailsComponent } from './cardetails/cardetails.component';
+import {BasicAuthHttpInterceptorService} from './basic-auth-http-interceptor.service';
 
 
 @NgModule({
@@ -32,7 +33,11 @@ import { CardetailsComponent } from './cardetails/cardetails.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: BasicAuthHttpInterceptorService, multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

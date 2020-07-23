@@ -17,46 +17,50 @@ export class HttpClientService {
     private httpClient: HttpClient,
   ) { }
 
+  // tslint:disable-next-line:typedef
   getCars()
   {
-    const username = 'user';
-    const password = 'aaa';
-
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    return this.httpClient.get<Car[]>(this.baseUrl, {headers});
+    // const username = 'user';
+    // const password = '1234';
+    //
+    // const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.httpClient.get<Car[]>(this.baseUrl);
 
   }
 
 
 
+  // tslint:disable-next-line:typedef
   getCarById(id: number)
   {
-    const username = 'user';
-    const password = 'aaa';
-
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    return this.httpClient.get(this.baseUrl + '/' + id, {headers});
+    // const username = 'user';
+    // const password = '1234';
+    //
+    // const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.httpClient.get(this.baseUrl + '/' + id);
 
     // return this.httpClient.get<Car>("http://localhost:8080/cars/" +id , {headers});
 
   }
 
+  // tslint:disable-next-line:typedef
   public deleteCar(car){
-    const username = 'user';
-    const password = 'aaa';
-
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    // const username = 'user';
+    // const password = '1234';
+    //
+    // const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient
-          .delete<Car>('http://localhost:8080/cars' + '/' + car.id, {headers});
+          .delete<Car>('http://localhost:8080/cars' + '/' + car.id);
   }
 
+  // tslint:disable-next-line:typedef
   public createCar(car){
 
-    const username = 'user';
-    const password = 'aaa';
+    // const username = 'user';
+    // const password = '1234';
+    //
+    // const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-
-    return this.httpClient.post<Car>('http://localhost:8080/cars', car, {headers});
+    return this.httpClient.post<Car>('http://localhost:8080/cars', car);
   }
 }
