@@ -1,0 +1,29 @@
+<div class="container" *ngIf="!loginService.isUserLoggedIn()">
+  <p> log in to webpage</p>
+</div>
+<div class="col-md-6" *ngIf="loginService.isUserLoggedIn()">
+  <div class="column1">
+    <img src="{{car.image}} " align="right"/>
+  </div>
+   <div class="column2">
+
+  <h4>Mark: </h4>
+    {{car.mark}}
+  <h4>Name: </h4>
+    {{car.name}}
+  <h4>Engine: </h4>
+    {{car.engine}}
+  <h4>Engine Capacity: </h4>
+    {{car.capacityEngine}}
+  <h4>Onboard Kilometers: </h4>
+    {{car.kilometers}}
+  <h4>Price: </h4>
+    {{car.price}}
+  <br>
+  <br>
+  <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
+  <br>
+  <button class="btn btn-danger" (click)="updateCar(car)">Edit Car </button>
+   </div>
+</div>
+

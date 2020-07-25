@@ -1,0 +1,45 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Car</h2>
+  <form>
+    <div class="form-group">
+      <label > Name: </label>
+      <input type="name" [(ngModel)]="car.name" class="form-control" placeholder="" name="name">
+    </div>
+
+    <div class="form-group">
+      <label >Mark: </label>
+      <input type="mark" [(ngModel)]="car.mark" class="form-control" placeholder="Mark" name="mark">
+    </div>
+
+    <div class="form-group">
+      <label >Engine: </label>
+      <input type="engine" [(ngModel)]="car.engine" class="form-control" placeholder="Engine" name="engine">
+    </div>
+
+    <div class="form-group">
+      <label >Capacity Engine: </label>
+      <input type="capacityEngine" [(ngModel)]="car.capacityEngine" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+    </div>
+
+    <div class="form-group">
+      <label >Kilometers: </label>
+      <input type="kilometers" [(ngModel)]="car.kilometers"class="form-control"  placeholder="Kilometers" name="kilometers">
+    </div>
+
+    <div class="form-group">
+      <label >Price: </label>
+      <input type="price" [(ngModel)]="car.price" class="form-control" placeholder="Price" name="price">
+    </div>
+
+    <div class="form-group">
+      <label >Image url: </label>
+      <input type="text" [(ngModel)]="car.image" class="form-control" placeholder="Image" name="image">
+    </div>
+
+
+    <button class="btn btn-danger" (click)="updateCar()">Update Car</button>
+    <button class="btn btn-success" (click)="returnToCarDetails(car)">Back To Car Details</button>
+
+  </form>
+</div>
+
