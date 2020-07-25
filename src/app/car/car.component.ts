@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClientService, Car} from '../http-client.service';
+import {HttpClientService} from '../http-client.service';
 import {AuthenitcationService} from '../authenitcation.service';
 import {Router} from '@angular/router';
+import {Car} from '../Car';
 
 
 @Component({

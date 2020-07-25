@@ -7,4 +7,6 @@ export class Car {
     public kilometers: number;
     public price: number;
     public image: string;
+    constructor() {
+    }
 }
