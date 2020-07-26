@@ -1,0 +1,23 @@
+<p>Rent car in our company!</p>
+
+
+<!-- card section--->
+  <div class="cards" *ngFor="let car of cars">
+  <div class="card">
+    <div class="car-card">
+      <div class="card-img">
+  <a href="#"><img class="card-img-top" src="{{car.image}}" alt=""></a>
+      </div>
+  <div class="card-body">
+    <h4 class="card-title">
+      <a (click)="getCarDetails(car)">{{car.mark}}</a>
+    </h4>
+    <h5>${{car.price}}</h5>
+    <p class="card-text">{{car.name}}</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+  </div>
+</div></div>
+</div>
+

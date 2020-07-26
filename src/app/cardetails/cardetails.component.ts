@@ -15,7 +15,7 @@ export class CardetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router,
               private httpClientService: HttpClientService,
-              private loginService: AuthenitcationService) {
+              public loginService: AuthenitcationService) {
   }
 
   ngOnInit(): void {

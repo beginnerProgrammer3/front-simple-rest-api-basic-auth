@@ -8,7 +8,8 @@
 <!--        <li><a routerLink="/" class="nav-link"> View Cars </a></li>-->
 <!--        <li><a routerLink="/addcar" class="nav-link"> Add Car</a></li>-->
 
-        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">View cars</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Main</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/admin" class="nav-link">Manage</a></li>
         <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addcar" class="nav-link">Add car</a></li>
         <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
         <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>

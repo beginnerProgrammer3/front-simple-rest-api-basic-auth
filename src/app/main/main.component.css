@@ -1,0 +1,21 @@
+
+/* do not touch this its card section*/
+img{
+  height: 100pt;
+  width: 150pt;
+}
+
+
+
+.cards{
+  display: inline-flex;
+  padding: 10px;
+
+}
+.card-title{
+  color: cornflowerblue;
+}
+body {
+  padding-top: 56px;
+}
+/*/////////////////////////////////////////*/

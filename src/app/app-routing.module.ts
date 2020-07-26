@@ -7,9 +7,11 @@ import {LoginComponent} from './login/login.component';
 import {LogoutComponent} from './logout/logout.component';
 import {CardetailsComponent} from './cardetails/cardetails.component';
 import {UpdateCarComponent} from './update-car/update-car.component';
+import {MainComponent} from './main/main.component';
 
 const routes: Routes = [
-  { path: '', component: CarComponent },
+  { path: 'admin', component: CarComponent },
+  {path: '', component: MainComponent},
   {path: 'addcar', component: AddcarComponent },
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
