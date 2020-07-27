@@ -16,6 +16,7 @@ import { CardetailsComponent } from './cardetails/cardetails.component';
 import {BasicAuthHttpInterceptorService} from './basic-auth-http-interceptor.service';
 import { UpdateCarComponent } from './update-car/update-car.component';
 import { MainComponent } from './main/main.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MainComponent } from './main/main.component';
     CardetailsComponent,
     UpdateCarComponent,
     MainComponent,
+    RegistrationComponent,
    ],
   imports: [
     BrowserModule,

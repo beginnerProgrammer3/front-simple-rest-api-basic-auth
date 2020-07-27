@@ -8,6 +8,7 @@ import {LogoutComponent} from './logout/logout.component';
 import {CardetailsComponent} from './cardetails/cardetails.component';
 import {UpdateCarComponent} from './update-car/update-car.component';
 import {MainComponent} from './main/main.component';
+import {RegistrationComponent} from './registration/registration.component';
 
 const routes: Routes = [
   { path: 'admin', component: CarComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'addcar', component: AddcarComponent },
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
+  {path: 'register', component: RegistrationComponent},
   {path: 'car-details/:id', component: CardetailsComponent},
   {path: 'update/:id', component: UpdateCarComponent}
 ];

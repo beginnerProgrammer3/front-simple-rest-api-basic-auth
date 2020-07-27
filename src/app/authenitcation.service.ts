@@ -36,9 +36,16 @@ export class AuthenitcationService {
 
     );
   }
+  isAdmin(){
+    let admin = sessionStorage.getItem('username');
+    if (admin === 'admin'){
+      return true;
+    }
+    return false;
+  }
 
   isUserLoggedIn() {
-    let user = sessionStorage.getItem('username')
+    let user = sessionStorage.getItem('username');
     console.log(!(user === null))
     return !(user === null)
   }
