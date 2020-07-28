@@ -17,6 +17,7 @@ import {BasicAuthHttpInterceptorService} from './basic-auth-http-interceptor.ser
 import { UpdateCarComponent } from './update-car/update-car.component';
 import { MainComponent } from './main/main.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { CustomersComponent } from './customers/customers.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { RegistrationComponent } from './registration/registration.component';
     UpdateCarComponent,
     MainComponent,
     RegistrationComponent,
+    CustomersComponent,
    ],
   imports: [
     BrowserModule,
