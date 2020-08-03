@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {AuthenitcationService} from '../authenitcation.service';
+import {HttpClientService} from '../http-client.service';
+import {ApkUser} from '../ApkUser';
 
 @Component({
   selector: 'app-registration',
@@ -9,11 +9,19 @@ import {AuthenitcationService} from '../authenitcation.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private router: Router,
-              private  loginservice: AuthenitcationService) { }
-
+  apkUser: ApkUser = new ApkUser();
+  constructor(
+    private httpClientService: HttpClientService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  createUser(): void {
+    this.httpClientService.createUser(this.apkUser)
+      .subscribe(data => {
+        alert("Car was created successfully");
+      });
   }
 
 }
