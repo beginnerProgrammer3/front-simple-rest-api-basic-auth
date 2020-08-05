@@ -4,4 +4,5 @@
     password: <input type="password" name="password" [(ngModel)]="password">
   </div>
   <button (click)=checkLogin() class="btn btn-success"> Login </button>
+  <div *ngIf="invalidLogin" style="color:red;"> Login is not Authenticated, check email and validate</div>
 </div>
