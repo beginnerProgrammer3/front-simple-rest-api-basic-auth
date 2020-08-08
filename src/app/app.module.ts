@@ -18,6 +18,7 @@ import { UpdateCarComponent } from './update-car/update-car.component';
 import { MainComponent } from './main/main.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { CustomersComponent } from './customers/customers.component';
+import { RentCarComponent } from './rent-car/rent-car.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { CustomersComponent } from './customers/customers.component';
     MainComponent,
     RegistrationComponent,
     CustomersComponent,
+    RentCarComponent,
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<div class="container" *ngIf="!loginService.isUserLoggedIn()">
+  <p> log in to webpage</p>
+</div>
+<div class="col-md-6" *ngIf="loginService.isUserLoggedIn()">
+  <div class="column1">
+    <img src="{{car.image}} " align="right"/>
+  </div>
+  <div class="column2">
+
+    {{car.mark}} {{car.name}}
+    <h4>Price: </h4>
+    {{car.price}}
+    <br>
+    <form action="">
+    <br>
+      <div class="form-group">
+        <label >Capacity Engine: </label>
+        <input type="capacityEngine" [(ngModel)]="booking.startDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+      </div>
+      <div class="form-group">
+        <label >Capacity Engine: </label>
+        <input type="capacityEngine" [(ngModel)]="booking.EndDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+      </div>
+    <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
+    <br>
+    <button class="btn btn-success" (click)="rentCar(car)">Rent Car </button>
+    </form>
+  </div>
+</div>
+
+

@@ -23,6 +23,9 @@ export class MainComponent implements OnInit {
     this.httpClientService.getCars().subscribe(response => {
       this.cars = response; });
   }
+  rentCar(car: Car) {
+    this.router.navigate(['rent-car', car.id]);
+  }
 
   getCarDetails(car: Car){
     this.router.navigate(['car-details', car.id]);
