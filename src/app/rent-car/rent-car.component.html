@@ -14,12 +14,12 @@
     <form action="">
     <br>
       <div class="form-group">
-        <label >Capacity Engine: </label>
-        <input type="capacityEngine" [(ngModel)]="booking.startDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+        <label >StartDate: </label>
+        <input type="date" [(ngModel)]="booking.pickupDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
       </div>
       <div class="form-group">
-        <label >Capacity Engine: </label>
-        <input type="capacityEngine" [(ngModel)]="booking.EndDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+        <label >End Date: </label>
+        <input type="date" [(ngModel)]="booking.dropDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
       </div>
     <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
     <br>

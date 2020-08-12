@@ -51,4 +51,7 @@ export class HttpClientService {
   public createUser(apkUser){
     return this.httpClient.post<ApkUser>('http://localhost:8080/createuser', apkUser);
   }
+  public rentACar(car){
+    return this.httpClient.post<Car>('http://localhost:8080/booking', car);
+  }
 }
