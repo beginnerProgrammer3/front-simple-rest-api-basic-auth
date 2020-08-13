@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {Car} from './Car';
 import {ApkUser} from './ApkUser';
+import {Booking} from './Booking';
 
 
 
@@ -51,7 +52,10 @@ export class HttpClientService {
   public createUser(apkUser){
     return this.httpClient.post<ApkUser>('http://localhost:8080/createuser', apkUser);
   }
-  public rentACar(car){
-    return this.httpClient.post<Car>('http://localhost:8080/booking', car);
+
+  public rentACar(booking){
+     return this.httpClient.post<Booking>('http://localhost:8080/booking', booking);
+
+
   }
 }
