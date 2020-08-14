@@ -1,1 +1,42 @@
-<p>customers works!</p>
+<div class="col-md-6">
+  <h2 class="text-center">Customer Info</h2>
+  <form>
+    <div class="form-group">
+      <label > First Name: </label>
+      <input type="name" [(ngModel)]="customer.firstName" class="form-control" placeholder="Name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label >Last Name: </label>
+      <input type="mark" [(ngModel)]="customer.lastName" class="form-control" placeholder="Mark" name="mark">
+    </div>
+
+    <div class="form-group">
+      <label >Address Line 1: </label>
+      <input type="engine" [(ngModel)]="customer.addressLine1" class="form-control" placeholder="Engine" name="engine">
+    </div>
+
+    <div class="form-group">
+      <label >Address Line 2: </label>
+      <input type="capacityEngine" [(ngModel)]="customer.addressLine2" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+    </div>
+
+    <div class="form-group">
+      <label >Postcode: </label>
+      <input type="text" [(ngModel)]="customer.postcode"class="form-control"  placeholder="postcode" name="postcode">
+    </div>
+
+    <div class="form-group">
+      <label >Phone Number: </label>
+      <input type="tel" [(ngModel)]="customer.phoneNumber" class="form-control" placeholder="phone Number" name="phone Number">
+    </div>
+
+    <div class="form-group">
+      <label >driver License Number: </label>
+      <input type="text" [(ngModel)]="customer.driverLicenseNumber" class="form-control" placeholder="driver Lincence Number" name="image">
+    </div>
+
+    <button class="btn btn-success" (click)="updateCustomer()">Update Customer Info</button>
+
+  </form>
+</div>

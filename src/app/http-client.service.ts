@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {Car} from './Car';
 import {ApkUser} from './ApkUser';
 import {Booking} from './Booking';
+import { Customer } from './Customer';
 
 
 
@@ -55,7 +56,12 @@ export class HttpClientService {
 
   public rentACar(booking){
      return this.httpClient.post<Booking>('http://localhost:8080/booking', booking);
+  }
 
-
+  public getCustomerByName(name: string){
+    return this.httpClient.get<Customer>('http://localhost:8080/customer/' + name);
+  }
+  public updateCustomer(customer){
+    return this.httpClient.put<Customer>('http://localhost:8080/customer/' + sessionStorage.getItem('username'), customer);
   }
 }
