@@ -4,17 +4,14 @@
 <!--      <a href="https://www.github.com/beginnerProgrammer3" class="navbar-brand"> My Github </a>-->
 
       <ul class="navbar-nav">
-<!--        <li><a href="https://www.github.com/beginnerProgrammer3" class="navbar-brand"> My Github </a>-->
-<!--        <li><a routerLink="/" class="nav-link"> View Cars </a></li>-->
-<!--        <li><a routerLink="/addcar" class="nav-link"> Add Car</a></li>-->
+
 
         <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Main</a></li>
         <li><a *ngIf="loginService.isAdmin() && loginService.isUserLoggedIn()" routerLink="/admin" class="nav-link">Manage</a></li>
         <li><a *ngIf="loginService.isAdmin() && loginService.isUserLoggedIn()" routerLink="/addcar" class="nav-link">Add car</a></li>
         <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
         <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/register" class="nav-link">Register on site</a></li>
-        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">My Profile</a></li>
-        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/customerinfo" class="nav-link">My Data</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/myprofile" class="nav-link">My Profile</a></li>
         <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
       </ul>
 

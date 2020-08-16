@@ -19,6 +19,7 @@ import { MainComponent } from './main/main.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { CustomersComponent } from './customers/customers.component';
 import { RentCarComponent } from './rent-car/rent-car.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { RentCarComponent } from './rent-car/rent-car.component';
     RegistrationComponent,
     CustomersComponent,
     RentCarComponent,
+    MyprofileComponent,
    ],
   imports: [
     BrowserModule,

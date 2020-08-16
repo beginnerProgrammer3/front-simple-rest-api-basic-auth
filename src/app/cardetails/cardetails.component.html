@@ -23,7 +23,7 @@
   <br>
   <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
   <br>
-  <button class="btn btn-accent" (click)="updateCar(car)">Edit Car </button>
+  <button *ngIf="loginService.isAdmin()" class="btn btn-accent"  (click)="updateCar(car)">Edit Car </button>
    </div>
 </div>
 

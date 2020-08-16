@@ -55,13 +55,17 @@ export class HttpClientService {
   }
 
   public rentACar(booking){
-     return this.httpClient.post<Booking>('http://localhost:8080/booking', booking);
+     return this.httpClient.post<Booking>('http://localhost:8080/booking/book', booking);
   }
 
   public getCustomerByName(name: string){
     return this.httpClient.get<Customer>('http://localhost:8080/customer/' + name);
   }
+
+  public getBookingByCustomerId(id: number){
+    return this.httpClient.get<Booking[]>('http://localhost:8080/booking/' + id);
+  }
   public updateCustomer(customer){
     return this.httpClient.put<Customer>('http://localhost:8080/customer/' + sessionStorage.getItem('username'), customer);
-  }
+    }
 }

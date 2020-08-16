@@ -1,0 +1,31 @@
+<p>My Profile Data!</p>
+
+<p>{{customer.firstName}} {{customer.lastName}}</p>
+<p>{{customer.addressLine1}}</p>
+<p>{{customer.addressLine2}}</p>
+<p>{{customer.postcode}}</p>
+<p>{{customer.phoneNumber}}</p>
+<p>{{customer.driverLicenseNumber}}</p>
+
+<button class="btn btn-dark"  routerLink="/customerinfo" >Edit My Data</button>
+<br>
+<br>
+<p>My Rent History </p>
+<div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>pickup Date</th>
+    <th>drop Date</th>
+    <th>car</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let booking of bookings">
+    <td>{{booking.pickupDate}}</td>
+    <td>{{booking.dropDate}}</td>
+    <td>{{booking.Car.mark}} {{booking.Car.name}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>

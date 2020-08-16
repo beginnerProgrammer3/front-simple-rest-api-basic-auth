@@ -11,6 +11,7 @@ import {MainComponent} from './main/main.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {RentCarComponent} from './rent-car/rent-car.component';
 import {CustomersComponent} from './customers/customers.component';
+import {MyprofileComponent} from './myprofile/myprofile.component';
 
 const routes: Routes = [
   { path: 'admin', component: CarComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'car-details/:id', component: CardetailsComponent},
   {path: 'update/:id', component: UpdateCarComponent},
   {path: 'rent-car/:id', component: RentCarComponent},
-  {path: 'customerinfo', component: CustomersComponent}
+  {path: 'customerinfo', component: CustomersComponent},
+  {path: 'myprofile', component: MyprofileComponent}
 ];
 
 @NgModule({

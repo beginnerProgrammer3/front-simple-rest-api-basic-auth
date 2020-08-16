@@ -8,7 +8,6 @@ import {AuthenitcationService} from '../authenitcation.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   username = '';
   password = '';
   invalidLogin = false;
@@ -25,7 +24,7 @@ export class LoginComponent implements OnInit {
       data => {
         this.router.navigate([''])
         this.invalidLogin = false;
-      },
+        },
       error => this.invalidLogin = true
     ))
   }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import {Customer} from './Customer';
 
 export class User {
   constructor(
@@ -32,9 +33,7 @@ export class AuthenitcationService {
           sessionStorage.setItem('basicauth', authString);
           return userData;
         }
-      )
-
-    );
+      ));
   }
   isAdmin(){
     let admin = sessionStorage.getItem('username');
@@ -48,6 +47,7 @@ export class AuthenitcationService {
     let user = sessionStorage.getItem('username');
     console.log(!(user === null))
     return !(user === null)
+
   }
 
   logOut() {
