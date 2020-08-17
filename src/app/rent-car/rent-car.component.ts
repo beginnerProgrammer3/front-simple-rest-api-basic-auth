@@ -21,6 +21,8 @@ export class RentCarComponent implements OnInit {
   private id: number;
   private booking =  new Booking();
   private customer = new Customer();
+
+
   constructor(private route: ActivatedRoute, private router: Router,
               private httpClientService: HttpClientService,
               public loginService: AuthenitcationService) { }

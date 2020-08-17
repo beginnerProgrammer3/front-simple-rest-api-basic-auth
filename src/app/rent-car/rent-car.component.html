@@ -15,16 +15,21 @@
     <br>
       <div class="form-group">
         <label >StartDate: </label>
-        <input type="date" [(ngModel)]="booking.pickupDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
+        <input type="date" [(ngModel)]="booking.pickupDate" class="form-control" placeholder="Capacity Engine" name="setTodaysDate">
       </div>
       <div class="form-group">
         <label >End Date: </label>
         <input type="date" [(ngModel)]="booking.dropDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
       </div>
-    <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
+
     <br>
-    <button class="btn btn-success" (click)="rentCar(car)">Rent Car </button>
+      <div *ngIf="booking.dropDate > booking.pickupDate ; else ifFail">
+        <button class="btn btn-success"  (click)="rentCar()">Rent Car </button>
+      </div>
+      <ng-template #ifFail><button class="btn btn-warning" >Change date to correct ! </button></ng-template>
     </form>
+    <br>
+    <button class="btn btn-info" routerLink="/">Return to List of Cars </button>
   </div>
 </div>
 
