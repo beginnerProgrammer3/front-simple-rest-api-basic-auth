@@ -5,7 +5,10 @@ img{
   width: 150pt;
 }
 
-
+.imageFirst{
+  height: 1000pt;
+  width: 1500pt;
+}
 
 .cards{
   display: inline-flex;

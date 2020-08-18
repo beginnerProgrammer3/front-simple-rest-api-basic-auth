@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClientService} from '../http-client.service';
 import {Customer} from '../Customer';
 import {Booking} from '../Booking';
+import {AuthenitcationService} from '../authenitcation.service';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class MyprofileComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router,
               public httpClientService: HttpClientService,
+              public loginService: AuthenitcationService
               ) {
   }
 

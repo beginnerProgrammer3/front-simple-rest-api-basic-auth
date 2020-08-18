@@ -19,9 +19,10 @@
       </div>
       <div class="form-group">
         <label >End Date: </label>
+
         <input type="date" [(ngModel)]="booking.dropDate" class="form-control" placeholder="Capacity Engine" name="capacityEngine">
       </div>
-
+        {{booking.pickupDate}}   dupa  {{date}}
     <br>
       <div *ngIf="booking.dropDate > booking.pickupDate ; else ifFail">
         <button class="btn btn-success"  (click)="rentCar()">Rent Car </button>

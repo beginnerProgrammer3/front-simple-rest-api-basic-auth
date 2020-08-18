@@ -20,6 +20,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CustomersComponent } from './customers/customers.component';
 import { RentCarComponent } from './rent-car/rent-car.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
+import { AfterrentsiteComponent } from './afterrentsite/afterrentsite.component';
+
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
     CustomersComponent,
     RentCarComponent,
     MyprofileComponent,
+    AfterrentsiteComponent,
    ],
   imports: [
     BrowserModule,

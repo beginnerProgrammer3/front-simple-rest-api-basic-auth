@@ -5,7 +5,6 @@ import {HttpClientService} from '../http-client.service';
 import {AuthenitcationService} from '../authenitcation.service';
 import {Booking} from '../Booking';
 import {Customer} from '../Customer';
-import {map} from 'rxjs/operators';
 
 
 
@@ -21,11 +20,18 @@ export class RentCarComponent implements OnInit {
   private id: number;
   private booking =  new Booking();
   private customer = new Customer();
-
+  todaysDate: Date;
+  date: Date;
 
   constructor(private route: ActivatedRoute, private router: Router,
               private httpClientService: HttpClientService,
-              public loginService: AuthenitcationService) { }
+              public loginService: AuthenitcationService) {
+    this.todaysDate = new Date();
+
+    this.date = new Date();
+
+
+  }
 
   ngOnInit(): void {
     this.car = new Car();
@@ -39,8 +45,7 @@ export class RentCarComponent implements OnInit {
       console.log(data);
       this.car = data;
     }, error => console.log(error));
-
-  }
+      }
 
   rentCar(){
     this.booking.Car = this.car;

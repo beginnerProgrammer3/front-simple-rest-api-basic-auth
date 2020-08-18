@@ -12,6 +12,7 @@ import {RegistrationComponent} from './registration/registration.component';
 import {RentCarComponent} from './rent-car/rent-car.component';
 import {CustomersComponent} from './customers/customers.component';
 import {MyprofileComponent} from './myprofile/myprofile.component';
+import {AfterrentsiteComponent} from './afterrentsite/afterrentsite.component';
 
 const routes: Routes = [
   { path: 'admin', component: CarComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'update/:id', component: UpdateCarComponent},
   {path: 'rent-car/:id', component: RentCarComponent},
   {path: 'customerinfo', component: CustomersComponent},
-  {path: 'myprofile', component: MyprofileComponent}
+  {path: 'myprofile', component: MyprofileComponent},
+  {path: 'success', component: AfterrentsiteComponent}
 ];
 
 @NgModule({
